@@ -128,6 +128,7 @@ class HeadlessCanvasConfig(CanvasConfig):
 
 class HeadlessContext(Context):
     def __init__(self, config, share):
+        config.opengl_api = "gl"
         super(HeadlessContext, self).__init__(config, share)
 
         self.display_connection = config.canvas.display._display_connection
